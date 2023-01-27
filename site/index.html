@@ -2,7 +2,7 @@
 <html lang="en-US">
   <head>
     <meta charset="utf-8">
-    <title>hello-wasm example</title>
+    <title>arkworks example</title>
     <style>
         body {
           position: absolute;
@@ -14,12 +14,63 @@
           flex-direction: column;
           align-items: center;
           justify-content: center;
+          overflow: scroll;
         }
       </style>
   </head>
   <body>
-    <button id="play-pause"></button>
+    <!-- <button id="play-pause"></button>
     <canvas id="game-of-life-canvas"></canvas>
-    <script src="./index.js"></script>
+    <script src="./index.js"></script> -->
+
+    <script type="text/javascript", src="./index.js"></script>
+    <link rel="stylesheet" href="./style.css">
+
+    <p><strong>vkey</strong></p>
+    <button id="show-vkey-button">setup</button>
+    <p  id="vkey"></p>
+    <button id="copy-vkey-button">コピー</button>
+
+    <form>
+      <div class="container">
+        <div class="item">
+          <label for="id">id:</label><br>
+          <input type="text" id="id" name="id" value = "5CiPPseXPECbkjWCa6MnjNokrgYjMqmKndv2rSnekmSK2DjL"><br>
+        </div>
+        <div class="item">
+          <label for="name">name:</label><br>
+          <input type="text" id="name" name="name" value="koyamaatsuki"><br>
+        </div>
+        <div class="item">
+          <label for="birthday">birthday:</label><br>
+          <input type="text" id="birthday" name="birthday" value="20000510"><br>
+        </div>
+      </div>
+      <div class="container">
+        <div class="item">
+          <label for="secret">secret:</label><br>
+          <input type="text" id="secret" name="secret" value="123456789012"><br>
+        </div>
+        <div class="item">
+          <label for="nonce">nonce:</label><br>
+          <input type="text" id="nonce" name="nonce" value="afe387d2"><br><br>
+        </div>
+      <button class="item-button" type="button" id="create-proof-button">計算</button>
+      </div>
+    </form> 
+
+        <p><strong>Proof</strong></p>
+          <button id="copy-proof-button">コピー</button>
+        <p id="proof"></p>
+
+
+        <p><strong>CID</strong></p>
+          <button id="copy-CID-button">コピー</button>
+        <p id="CID"></p>
+
+        <p><strong>hashed name and birth</strong></p>
+          <button id="copy-name-birth-hash-button">コピー</button>
+        <p id="name-birth-hash"></p>
+
   </body>
 </html>

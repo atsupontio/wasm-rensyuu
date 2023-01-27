@@ -4,7 +4,10 @@ https://developer.mozilla.org/ja/docs/WebAssembly/Rust_to_wasm
 https://moshg.github.io/rustwasm-book-ja/
 
 ```
-bash
 cd site
 npm run server
+```
+
+```
+wasm-pack build --target bundler
 ```

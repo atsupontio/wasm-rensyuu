@@ -10,3 +10,32 @@ crate-type = ["cdylib"]
 
 [dependencies]
 wasm-bindgen = "0.2"
+
+
+ark-bls12-381 = { version = "^0.3.0", features = [ "curve" ] }
+ark-relations = "^0.3.0"
+ark-r1cs-std = "^0.3.0" 
+# ark-crypto-primitives = { version = "^0.3.0", features = [ "parallel", "r1cs" ] }
+ark-crypto-primitives = { version = "^0.3.0", default-features = false }
+# ark-std = { version = "^0.3.0", features = [ "parallel" ] }
+ark-std = { version = "^0.3.0", default-features = false }
+# ark-groth16 = { version = "^0.3.0", features = [ "parallel", "r1cs" ] }
+ark-groth16 = { version = "^0.3.0", default-features = false }
+ark-ec = { version = "^0.3.0", default-features = false }
+ark-serialize = "^0.3.0"
+arkworks-native-gadgets = { version = "1.2.0", default-features = false }
+ark-ed-on-bls12-381 = { version = "^0.3.0", features = ["r1cs"] }
+
+hex = { version = "0.3.0", default-features = false }
+# serde = { version = "1.0", features = ["derive"] }
+# serde_json = "1.0"
+base58 = { version = "0.2.0", default-features = false }
+once_cell = { version = "1.16.0", default-features = false }
+
+console_error_panic_hook = { version = "0.1.7", optional = true }
+
+[dev-dependencies]
+wasm-bindgen-test = "0.3.13"
+
+[features]
+default = ["console_error_panic_hook"]
