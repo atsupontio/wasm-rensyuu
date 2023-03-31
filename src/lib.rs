@@ -235,6 +235,7 @@ fn create_input(id: &str, secret: &str, nonce: &str, name: &str, birth: &str) ->
     let new_id2 = encode_hex(new_id.as_slice());
     println!("new_id: {:?}", new_id2);
     // byte
+    // 整形する
     let mut id_bytes = hex::decode(&new_id2).unwrap();
     id_bytes.drain(0..=0);
     id_bytes.drain(id_bytes.len() - 2 ..= id_bytes.len() - 1);

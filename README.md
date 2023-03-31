@@ -5,7 +5,7 @@ https://moshg.github.io/rustwasm-book-ja/
 
 ```
 cd site
-npm run server
+npm run serve
 ```
 
 ```

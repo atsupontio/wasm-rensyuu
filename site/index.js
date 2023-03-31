@@ -134,14 +134,15 @@ import("./node_modules/hello-wasm/hello_wasm.js").then((js) => {
             var result = js.create_proof(id, secret, nonce, name, birth);
             var CID = js.get_CID(id, secret, nonce, name, birth);
             var name_birth_hash = js.get_hash_name_birth(name, birth);
-            document.getElementById("proof").innerHTML = result;
-            document.getElementById("CID").innerHTML = CID;
-            document.getElementById("name-birth-hash").innerHTML = name_birth_hash;
+            document.getElementById("proof").innerHTML = "0x" + result;
+            document.getElementById("CID").innerHTML = "0x" + CID;
+            document.getElementById("name-birth-hash").innerHTML = "0x" + name_birth_hash;
         }
 
 
         const showVkey = () => {
             var res = js.get_vkey();
+            res = "0x" + res; 
             document.getElementById("vkey").innerHTML = res;
             console.log("show vkey: ", res,);
         }
