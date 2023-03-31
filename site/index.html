@@ -2,7 +2,7 @@
 <html lang="en-US">
   <head>
     <meta charset="utf-8">
-    <title>hello-wasm example</title>
+    <title>arkworks example</title>
     <style>
         body {
           position: absolute;
@@ -14,12 +14,92 @@
           flex-direction: column;
           align-items: center;
           justify-content: center;
+          overflow: scroll;
         }
       </style>
   </head>
   <body>
-    <button id="play-pause"></button>
+    <!-- <button id="play-pause"></button>
     <canvas id="game-of-life-canvas"></canvas>
-    <script src="./index.js"></script>
+    <script src="./index.js"></script> -->
+
+    <script type="text/javascript", src="./index.js"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
+    <link rel="stylesheet" href="./style.css">
+
+    <div class="bigContainer">
+    <form>
+      <div class="container">
+        <label for="id">ID</label><br>
+        <div class="form">
+            <input type="text" id="id" class="form-box" name="id" value = "5CiPPseXPECbkjWCa6MnjNokrgYjMqmKndv2rSnekmSK2DjL"><br>
+        </div>
+
+        <label for="name">Name</label><br>
+        <div class="form">
+          <input type="text" id="name" class="form-box" name="name" value="koyamaatsuki"><br>
+        </div>
+
+        <label for="birthday">Birthday</label><br>
+        <div class="form">
+          <input type="text" id="birthday" class="form-box" name="birthday" value="20000510"><br>
+        </div>
+        <label for="secret">secret</label><br>
+        <div class="form">
+          <input type="text" id="secret" class="form-box" name="secret" value="123456789012"><br>
+        </div>
+
+        <label for="nonce">nonce</label><br>
+        <div class="form">
+          <input type="text" id="nonce" class="form-box" name="nonce" value="afe387d2" ><br><br>
+        </div>
+
+      <button class="proof-button" type="button" id="create-proof-button">create proof</button>
+      </div>
+    </form> 
+
+    <div class="container">
+
+      <div class="buttonContainer">
+        <label for="verification key" class="header">verification key</label><br>
+        <button id="show-vkey-button" class="vkey-button">setup</button>
+        
+        <button id="copy-vkey-button" class="copy-button">
+          <iconify-icon icon="material-symbols:file-copy-rounded"></iconify-icon>
+          copy
+        </button>
+      </div>
+      <p id="vkey"></p>
+
+      <div class="buttonContainer">
+      <label for="Proof">Proof</label><br>
+          <button id="copy-proof-button" class="copy-button">
+            <iconify-icon icon="material-symbols:file-copy-rounded"></iconify-icon>
+            copy
+          </button>
+      </div>
+        <p id="proof"></p>
+
+        <div class="buttonContainer">
+        <label for="CID">CID</label><br>
+          <button id="copy-CID-button" class="copy-button">
+            <iconify-icon icon="material-symbols:file-copy-rounded"></iconify-icon>
+            copy
+          </button>
+        </div>
+        <p id="CID"></p>
+
+        <div class="buttonContainer">
+        <label for="hashed name and birth">hashed name and birth</label><br>
+          <button id="copy-name-birth-hash-button" class="copy-button">
+            <iconify-icon icon="material-symbols:file-copy-rounded"></iconify-icon>
+            copy
+          </button>
+        </div>
+        <p id="name-birth-hash"></p>
+
+    </div>
+
+    </div>
   </body>
 </html>
